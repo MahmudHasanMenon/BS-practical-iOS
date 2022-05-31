@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practical_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="98"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="O45-HK-DGk">
+            <objects>
+                <viewController storyboardIdentifier="MovieVC" id="R9c-sX-GNT" customClass="MovieViewController" customModule="Practical_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WJL-7p-bNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hBn-An-XeX">
+                                <rect key="frame" x="10" y="115" width="394" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Movie" translatesAutoresizingMaskIntoConstraints="NO" id="osa-EU-JDo">
+                                <rect key="frame" x="0.0" y="54" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K3Y-e7-U5G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="osa-EU-JDo" firstAttribute="top" secondItem="K3Y-e7-U5G" secondAttribute="top" constant="10" id="2Rs-sq-SPE"/>
+                            <constraint firstItem="hBn-An-XeX" firstAttribute="leading" secondItem="K3Y-e7-U5G" secondAttribute="leading" constant="10" id="Ur5-9m-kQe"/>
+                            <constraint firstItem="hBn-An-XeX" firstAttribute="top" secondItem="osa-EU-JDo" secondAttribute="bottom" constant="10" id="VP3-Ro-vwy"/>
+                            <constraint firstItem="K3Y-e7-U5G" firstAttribute="bottom" secondItem="hBn-An-XeX" secondAttribute="bottom" constant="10" id="dtg-hj-I4x"/>
+                            <constraint firstItem="osa-EU-JDo" firstAttribute="leading" secondItem="K3Y-e7-U5G" secondAttribute="leading" id="e4n-LR-WXf"/>
+                            <constraint firstItem="K3Y-e7-U5G" firstAttribute="trailing" secondItem="hBn-An-XeX" secondAttribute="trailing" constant="10" id="hzU-Db-fJn"/>
+                            <constraint firstItem="osa-EU-JDo" firstAttribute="trailing" secondItem="K3Y-e7-U5G" secondAttribute="trailing" id="uOd-P3-gn5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="osa-EU-JDo" id="OZ6-Nn-t8l"/>
+                        <outlet property="tableView" destination="hBn-An-XeX" id="eaj-r0-8fv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K71-F7-o6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531.8840579710145" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
